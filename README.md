@@ -11,6 +11,7 @@ Will go here
 will go here
 
 ## Build Status
+[![Build Status](https://travis-ci.com/dtlight/hack-winchester.svg?token=8VzQcFZGdx7xQoVYeEZv&branch=master)](https://travis-ci.com/dtlight/hack-winchester)
 
 ## Code style
 
