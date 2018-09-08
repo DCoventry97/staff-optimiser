@@ -10,4 +10,4 @@ install:
 before_script: cd test/rest/
 
 script:
-  - python TestUserData.py
+  - python TestReadUserData.py
