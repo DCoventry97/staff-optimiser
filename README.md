@@ -11,7 +11,6 @@ Will go here
 will go here
 
 ## Build Status
-[![Build Status]()
 
 ## Code style
 
