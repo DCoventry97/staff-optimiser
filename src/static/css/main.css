@@ -1,0 +1,56 @@
+.container-fluid .row .col-lg-12 h1{
+    text-align: center;  
+}
+
+.container-fluid .row .col-lg-12 #staff-selector{
+    text-align: center;  
+}
+
+.rating-button{
+    border: 2px black solid;
+    padding: 40px 40px;
+}
+
+#rate1{
+    background-color: red;
+}
+
+#rate2{
+    background-color: #f45642;
+}
+
+#rate3{
+    background-color: #f47141;
+}
+
+#rate4{
+    background-color: #f49441;
+}
+
+#rate5{
+    background-color: #f4b841;
+}
+
+#rate6{
+    background-color: #f4f141;
+}
+
+#rate7{
+    background-color: #d3f441;
+}
+
+#rate8{
+    background-color: #acf441;
+}
+
+#rate9{
+    background-color: #91f441;
+}
+
+#rate10{
+    background-color: #41f458;
+}
+
+p{
+    font-size: 16px;
+}
