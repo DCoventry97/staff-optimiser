@@ -30,11 +30,6 @@ Server essentially requires two main components. The server itself (see rest api
 
 ## Acknowledgments
 
-Below are resources directly responsible for the success of this repository. 
-
-The [OpenALPR](https://github.com/openalpr) library allows for the detection and recognition of number plates. Without this the training would have to be done yourself, using OpenCV, which this library builds on.
-
-[AdaFruit](https://github.com/adafruit) for simplyfying LCD setup with the Adafruit library.
 
 ## License
 
