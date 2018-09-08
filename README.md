@@ -4,11 +4,8 @@ Business performance optimiser
 ## Motivation
 University of Winchester Hackathon challenge to hack together solutions that help imrpove local business using machine learning algorithms to process data
 
-## Screenshots
-Will go here
-
 ## User guide
-will go here
+A detailed user guide containing screenshots is availabale here.
 
 ## Build Status
 [![Build Status](https://travis-ci.com/dtlight/hack-winchester.svg?token=8VzQcFZGdx7xQoVYeEZv&branch=master)](https://travis-ci.com/dtlight/hack-winchester)
