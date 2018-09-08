@@ -2,7 +2,7 @@
 Business performance optimiser
 
 ## Motivation
-University of Winchester Hackathon challenge to derrive solutions that help imrpove local business using machine learning algorithms to process data
+University of Winchester Hackathon challenge to hack together solutions that help imrpove local business using machine learning algorithms to process data
 
 ## Screenshots
 Will go here
@@ -24,9 +24,9 @@ will go here
 
 ### Installing
 Server essentially requires two main components. The server itself (see rest api below) and the machine learning algorithms (see algorithms beow)
-##### algorithms
+#### algorithms
 
-##### rest api
+#### rest api
 
 ## Acknowledgments
 
