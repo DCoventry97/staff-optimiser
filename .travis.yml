@@ -4,5 +4,3 @@ python: 3.6
 sudo: enabled
 install:
   - "pip install tensorflow"
-script:
-  - unittest
