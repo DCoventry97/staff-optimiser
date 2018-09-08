@@ -36,5 +36,6 @@ Server essentially requires two main components. The server itself (see rest api
 MIT, feel free to add to, remove, or improve our code. Acknowledge those whose code we've built on :-)
 
 [Dave Light](davelight.io)
+
 [Dan Coventry](dcoventry97.github.io)
 
