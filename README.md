@@ -9,6 +9,7 @@ This was aimed at local stores. A screen is displayed at checkout asking for a s
 
 The code can be modified for use in different scenarios, eg to monitor the number of drops a courier makes. A detailed user guide containing screenshots is availabale here.
 
+**Example of customer feedback at checkout:**
 <img src="manual/img/rating.jpg" width="800"/>
 
 ## Build Status
