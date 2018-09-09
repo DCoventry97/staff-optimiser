@@ -22,7 +22,9 @@ Once a user's id is entered the following prompt appears:
 
 ## Stats generated
 Example below shows a linear regression algorithm producing output for each time interval (hourly blocks). 
+
 X axis = time (rounded to the hour) 
+
 Y axis = feedback score
 
 <img src="img/results_example.png" width="800"/>
