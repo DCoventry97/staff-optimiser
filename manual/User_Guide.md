@@ -7,20 +7,20 @@ To start the server, run main.py
 
 Go to local host port 7643 (http://127.0.0.1:7643)
 
-### Cashier Log In
+## Cashier Log In
 
 
 
 
-### Customer feedback
+## Customer feedback
 
 
 
 
-### Stats generated
+## Stats generated
 
 
 
 
-### Business query
+## Business query
 Bsuinesses can now submit queries. Customer feedback trends are displayed.
