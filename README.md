@@ -12,6 +12,7 @@ The code can be modified for use in different scenarios, eg to monitor the numbe
 **Example of customer feedback at checkout:**
 
 <img src="manual/img/rating.jpg" width="800"/>
+
 **Example of stats generated using regression algorithms**
 
 
