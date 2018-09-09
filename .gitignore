@@ -172,3 +172,8 @@ fabric.properties
 
 # Editor-based Rest Client
 .idea/httpRequests
+
+#user xml files
+*.xml
+
+.idea/
