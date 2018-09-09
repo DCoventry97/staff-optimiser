@@ -18,7 +18,7 @@ The code can be modified for use in different scenarios, eg to monitor the numbe
 
 **Example of stats generated using regression algorithms**
 
-<img src="manual/img/stats.jpg" width="800"/>
+<img src="manual/img/results_example.png" width="800"/>
 
 ## Code style
 
