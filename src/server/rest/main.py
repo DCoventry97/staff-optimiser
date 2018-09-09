@@ -1,6 +1,6 @@
 #!flask/bin/python
 import xml.etree.cElementTree as ET
-from flask import Flask, request, Response, jsonify
+from flask import Flask, request, Response, jsonify, render_template
 import json
 from pathlib import Path
 
@@ -8,10 +8,10 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return "Hello, World!"
+    return render_template("index.html")
 
 
-@app.route("/staffscore", methods=["GET", "POST"])
+@app.route("/staffscore", methods=["POST"])
 def staff_score():
     staff_name = ""
     score = None
@@ -36,12 +36,12 @@ def staff_score():
             root = tree.getroot()
             new_rating = ET.SubElement(root, "rating")
             new_time = ET.SubElement(new_rating, "time")
-            new_time.text = time
+            new_time.text = str(time)
             new_score = ET.SubElement(root, "score")
-            new_score.text = score
+            new_score.text = str(score)
             tree.write(staff_name+".xml")
 
-    return jsonify(name=staff_name, s=score, t=time)
+        return jsonify({"a":score}), 201
 
 
 
