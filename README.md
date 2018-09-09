@@ -10,7 +10,7 @@ Winchester Council held a hackathon at the University of Winchester. One challen
 ## User guide
 This was aimed at local stores. A screen is displayed at checkout asking for a score. The figures are stored and tracked over time. Businesses can determine where staff work best. Perhaps have the staff with highest customer feedback on the tills and lowest in the stock room. Or maybe change shift patterns if one person scores better in the morning and another in the afternoon. 
 
-The code can be modified for use in different scenarios, eg to monitor the number of drops a courier makes. A more detailed user guide is availabale here.
+The code can be modified for use in different scenarios, eg to monitor the number of drops a courier makes. A more detailed user guide is availabale [here](manual/User_Guide.md).
 
 **Example of customer feedback at checkout:**
 
