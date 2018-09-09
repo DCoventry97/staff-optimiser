@@ -31,8 +31,14 @@ The code can be modified for use in different scenarios, eg to monitor the numbe
 ### Installing
 Server essentially requires two main components. The server itself (see rest api below) and the machine learning algorithms (see algorithms beow)
 #### algorithms
+```bash
+pip3 install tensorflow
+```
 
 #### rest api
+```bash
+pip3 install flask
+```
 
 ## Acknowledgments
 [Aymeric Damien](https://github.com/dtlight/TensorFlow-Examples) and the team of contributers for their Tensor Flow examples
