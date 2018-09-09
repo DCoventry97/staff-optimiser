@@ -16,8 +16,8 @@ def read(username):
             scores = []
             times = []
             for child in root:
-                rating = child.get("rating")
-                scores.append(rating.get("score"))
-                times.append(rating.get("time"))
-            
+                scores.append(child.find("score").text)
+                times.append(child.find("time").text)
+
             return times, scores
+
