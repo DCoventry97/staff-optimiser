@@ -37,7 +37,7 @@ def staff_score():
             new_rating = ET.SubElement(root, "rating")
             new_time = ET.SubElement(new_rating, "time")
             new_time.text = str(time)
-            new_score = ET.SubElement(root, "score")
+            new_score = ET.SubElement(new_rating, "score")
             new_score.text = str(score)
             tree.write(staff_name+".xml")
 

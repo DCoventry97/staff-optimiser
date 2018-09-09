@@ -175,3 +175,5 @@ fabric.properties
 
 #user xml files
 *.xml
+
+.idea/
