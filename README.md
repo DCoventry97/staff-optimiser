@@ -41,13 +41,13 @@ pip3 install flask
 ```
 
 ## Acknowledgments
-[Aymeric Damien](https://github.com/dtlight/TensorFlow-Examples) and the team of contributers for their Tensor Flow examples
+[Aymeric Damien](https://github.com/aymericdamien/TensorFlow-Examples) and the team of contributers for their Tensor Flow examples
 
 ## License
 
 MIT, feel free to add to, remove, or improve our code. Acknowledge those whose code we've built on :-)
 
-[Dave Light](davelight.io)
+[Dave Light](http://davelight.io)
 
-[Dan Coventry](dcoventry97.github.io)
+[Dan Coventry](https://github.com/dcoventry97.github.io)
 
