@@ -1,11 +1,20 @@
-# Hack Winchester
-Business performance optimiser
+# Staff Optimiser
+Business performance optimiser. Using customer feedback, sales and other data to review performance of a period of time.
 
 ## Motivation
-University of Winchester Hackathon challenge to hack together solutions that help imrpove local business using machine learning algorithms to process data
+Winchester Council held a hackathon at the University of Winchester. One challenge was to hack together solutions that help imrpove local business using machine learning algorithms to process data. 
 
 ## User guide
-A detailed user guide containing screenshots is availabale here.
+This was aimed at local stores. A screen is displayed at checkout asking for a score. The figures are stored and tracked over time. Businesses can determine where staff work best. Perhaps have the staff with highest customer feedback on the tills and lowest in the stock room. Or maybe change shift patterns if one person scores better in the morning and another in the afternoon. 
+
+The code can be modified for use in different scenarios, eg to monitor the number of drops a courier makes. A more detailed user guide is availabale here.
+
+**Example of customer feedback at checkout:**
+
+<img src="manual/img/rating.jpg" width="800"/>
+
+**Example of stats generated using regression algorithms**
+
 
 ## Build Status
 [![Build Status](https://travis-ci.com/dtlight/hack-winchester.svg?token=8VzQcFZGdx7xQoVYeEZv&branch=master)](https://travis-ci.com/dtlight/hack-winchester)
