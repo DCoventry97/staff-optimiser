@@ -1,5 +1,9 @@
 # User Guide
-An overview of how it works
+How it works and how to get it started
+
+**To begin with**
+To start the server, run main.py
+Go to local host port 7643 (http://127.0.0.1:7643)
 
 ### Cashier Log In
 
