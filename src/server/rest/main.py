@@ -1,4 +1,5 @@
 #!flask/bin/python
+import xml.etree.cElementTree as ET
 from flask import Flask, request, Response, jsonify
 import json
 from pathlib import Path
@@ -12,30 +13,33 @@ def index():
 
 @app.route("/staffscore", methods=["GET", "POST"])
 def staff_score():
-    staff_name = None
+    staff_name = ""
     score = None
     time = None
     #checks if post request
     if request.method == "POST":
         #gets data from post request in json form
         data = request.get_json()
-        staff_name = data.get("name")
-        time = data.get("time")
-        score = data.get("score")
+        subdata = data.get("report")
+        staff_name = subdata.get("name")
+        time = subdata.get("time")
+        score = subdata.get("score")
 
-        my_file = Path("./"+staff_name+".json")
-        if my_file.is_file():
-            with open(staff_name+".json", "r") as f:
-                existing_data = json.load(f)
-                print(existing_data)
+        file = Path("./"+staff_name+".xml")
+        if not file.is_file():
+            root = ET.Element("staffData")
+            tree = ET.ElementTree(root)
+            tree.write(staff_name+".xml")
 
-            with open(staff_name + ".json", "w") as file:
-                existing_data.update(data)
-                print(existing_data)
-                json.dump(existing_data, file)
-        else:
-            with open(staff_name+'.json', 'w') as outfile:
-                json.dump(data, outfile)
+        with open(staff_name+".xml") as file:
+            tree = ET.parse(staff_name+".xml")
+            root = tree.getroot()
+            new_rating = ET.SubElement(root, "rating")
+            new_time = ET.SubElement(new_rating, "time")
+            new_time.text = time
+            new_score = ET.SubElement(root, "score")
+            new_score.text = score
+            tree.write(staff_name+".xml")
 
     return jsonify(name=staff_name, s=score, t=time)
 
