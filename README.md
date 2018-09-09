@@ -49,5 +49,5 @@ MIT, feel free to add to, remove, or improve our code. Acknowledge those whose c
 
 [Dave Light](http://davelight.io)
 
-[Dan Coventry](https://github.io/dcoventry97.github.io)
+[Dan Coventry](https://dcoventry97.github.io)
 
