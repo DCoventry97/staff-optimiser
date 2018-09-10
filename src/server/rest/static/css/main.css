@@ -54,3 +54,8 @@
 p{
     font-size: 16px;
 }
+
+.container-fluid .row .col-lg-12 form{
+    text-align: center;
+}
+

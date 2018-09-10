@@ -19,12 +19,12 @@ def index():
 def view_report(id):
     result = lin_reg.get_val(id)
     if abs(result) > 0.1:
-        advice = "No trend detected."
+        advice = "No trend detected, they are consistent over the day."
     elif result > 0:
         advice = "more productive later in the day."
     else:
         advice = "more productive earlier in the day."
-    return render_template("result.html", advice = advice)
+    return render_template("result.html", advice=advice, id=id)
 
 
 @app.route("/getreport", methods=["GET","POST"])

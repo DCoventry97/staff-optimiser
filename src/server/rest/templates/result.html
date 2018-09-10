@@ -7,11 +7,16 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+    <!-- Our CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
 
-    <title>Report</title>
+    <title>Report For {{ id }}</title>
   </head>
   <body>
-    <h1>{{ advice }}</h1>
+    <h1>Report For {{ id }}</h1>
+
+    <p>The Advice computed for {{ id }} is: {{ advice }}</p>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
