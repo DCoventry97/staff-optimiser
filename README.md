@@ -5,7 +5,7 @@ Business performance optimiser. Using customer feedback, sales and other data to
 Winchester Council held a hackathon at the University of Winchester. One challenge was to hack together solutions that help improve local business using machine learning algorithms to process data. This solution is simply a prototype, it uses a trivial linear regression algorithm but still manages to demonstrate the overall concept (to the demands of this Hackahon).
 
 ## Build Status
-[![Build Status](https://travis-ci.com/dtlight/staff-optimiser.svg?token=8VzQcFZGdx7xQoVYeEZv&branch=master)](https://travis-ci.com/dtlight/staff-optimiser)
+[![Build Status](https://travis-ci.com/dtlight/staff-optimiser.svg?token=8VzQcFZGdx7xQoVYeEZv&branch=master)](https://travis-ci.com/dtlight/staff-optimiser) Travis build fails because of a 10 minute time out. The repository works fine.
 
 ## User guide
 This was aimed at local stores. A screen is displayed at checkout asking for a score. The figures are stored and tracked over time. Businesses can determine where staff work best. Perhaps have the staff with highest customer feedback on the tills and lowest in the stock room. Or maybe change shift patterns if one person scores better in the morning and another in the afternoon. 
