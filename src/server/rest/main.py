@@ -2,9 +2,13 @@
 import xml.etree.cElementTree as ET
 from flask import Flask, request, Response, jsonify, render_template, redirect
 import json
+import sys
+from linear_regression import LinearRegression
 from os import path
 
 app = Flask(__name__)
+
+lin_reg = LinearRegression()
 
 @app.route('/')
 def index():
@@ -13,8 +17,15 @@ def index():
 
 @app.route("/getreport/<id>")
 def view_report(id):
-    return id
-    
+    result = lin_reg.get_val(id)
+    if abs(result) > 0.1:
+        advice = "No trend detected."
+    elif result > 0:
+        advice = "more productive earlier in the day."
+    else:
+        advice = "more productive later in the day."
+    return render_template("result.html", advice = advice)
+
 
 @app.route("/getreport", methods=["GET","POST"])
 def get_report():
@@ -42,24 +53,24 @@ def staff_score():
         time = subdata.get("time")
         score = subdata.get("score")
 
-        file = path.isfile("..//algorithms/"+staff_name+".xml")
+        file = path.isfile("./xml/"+staff_name+".xml")
         if not file:
             root = ET.Element("staffData")
             tree = ET.ElementTree(root)
-            tree.write("..//algorithms/"+staff_name+".xml")
+            tree.write("./xml/"+staff_name+".xml")
             with open("staff.txt", "a") as staff_names:
                 staff_names.write("\n"+staff_name)
                 staff_names.close()
 
-        with open("..//algorithms/"+staff_name+".xml") as file:
-            tree = ET.parse("..//algorithms/"+staff_name+".xml")
+        with open("./xml/"+staff_name+".xml") as file:
+            tree = ET.parse("./xml/"+staff_name+".xml")
             root = tree.getroot()
             new_rating = ET.SubElement(root, "rating")
             new_time = ET.SubElement(new_rating, "time")
             new_time.text = str(time)
             new_score = ET.SubElement(new_rating, "score")
             new_score.text = str(score)
-            tree.write("..//algorithms/"+staff_name+".xml")
+            tree.write("./xml/"+staff_name+".xml")
 
         return jsonify({"a":score}), 201
 
