@@ -30,4 +30,8 @@ Y axis = feedback score
 <img src="img/results_example.png" width="800"/>
 
 ## Business query
-A buinesses can now submit queries. Customer feedback trends are displayed.
+A businesses can now submit queries. Customer feedback trends are displayed.
+
+<img src="img/feedback1.png" width="800"/>
+
+<img src="img/feedback2.png" width="800"/>
