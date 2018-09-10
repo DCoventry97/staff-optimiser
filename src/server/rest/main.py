@@ -30,9 +30,11 @@ def view_report(id):
 @app.route("/getreport", methods=["GET","POST"])
 def get_report():
     if request.method == "GET":
-        with open("staff.txt") as staff_names:
-            all_names = staff_names.readlines()
-            del all_names[0]
+        all_names = []
+        tree = ET.parse("./staff.xml")
+        root = tree.getroot()
+        for child in root:
+            all_names.append(child.text)
         return render_template("select_report.html", names=all_names)
     else:
         staff = request.form["staff-select"]
@@ -58,9 +60,18 @@ def staff_score():
             root = ET.Element("staffData")
             tree = ET.ElementTree(root)
             tree.write("./xml/"+staff_name+".xml")
-            with open("staff.txt", "a") as staff_names:
-                staff_names.write("\n"+staff_name)
-                staff_names.close()
+            
+            if not path.isfile("./staff.xml"):
+                root = ET.Element("staffNames")
+                tree = ET.ElementTree(root)
+                tree.write("staff.xml")
+
+            tree = ET.parse("./staff.xml")
+            root = tree.getroot()
+            print("ppppppppppppppppp")
+            new_user = ET.SubElement(root, "staff")
+            new_user.text = staff_name
+            tree.write("staff.xml")
 
         with open("./xml/"+staff_name+".xml") as file:
             tree = ET.parse("./xml/"+staff_name+".xml")
