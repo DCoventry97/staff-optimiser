@@ -2,7 +2,7 @@
 Business performance optimiser. Using customer feedback, sales and other data to review performance of a period of time.
 
 ## Motivation
-Winchester Council held a hackathon at the University of Winchester. One challenge was to hack together solutions that help imrpove local business using machine learning algorithms to process data. This solution is soley a protoype, it uses a trivial linear regression algorithm but still manages to demonstrate the overall concept (to the demands of this Hackahon).
+Winchester Council held a hackathon at the University of Winchester. One challenge was to hack together solutions that help improve local business using machine learning algorithms to process data. This solution is simply a prototype, it uses a trivial linear regression algorithm but still manages to demonstrate the overall concept (to the demands of this Hackahon).
 
 ## Build Status
 [![Build Status](https://travis-ci.com/dtlight/staff-optimiser.svg?token=8VzQcFZGdx7xQoVYeEZv&branch=master)](https://travis-ci.com/dtlight/staff-optimiser)
@@ -10,7 +10,7 @@ Winchester Council held a hackathon at the University of Winchester. One challen
 ## User guide
 This was aimed at local stores. A screen is displayed at checkout asking for a score. The figures are stored and tracked over time. Businesses can determine where staff work best. Perhaps have the staff with highest customer feedback on the tills and lowest in the stock room. Or maybe change shift patterns if one person scores better in the morning and another in the afternoon. 
 
-The code can be modified for use in different scenarios, eg to monitor the number of drops a courier makes. A more detailed user guide is availabale [here](manual/User_Guide.md).
+The code can be modified for use in different scenarios, eg to monitor the number of drops a courier makes. A more detailed user guide is available [here](manual/User_Guide.md).
 
 **Example of customer feedback at checkout:**
 
@@ -45,8 +45,8 @@ Matplotlib (for plotting graphs)
 pip install matplotlib
 ```
 
-## Acknowledgments
-[Aymeric Damien](https://github.com/aymericdamien/TensorFlow-Examples) and the team of contributers for their Tensor Flow examples
+## Acknowledgements
+[Aymeric Damien](https://github.com/aymericdamien/TensorFlow-Examples) and the team of contributors for their Tensor Flow examples
 
 ## License
 
