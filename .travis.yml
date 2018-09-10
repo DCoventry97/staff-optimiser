@@ -5,9 +5,9 @@ python: 3.6
 sudo: false
 
 install:
-  - "pip3 install tensorflow"
+  - "pip install tensorflow"
   
-  - "pip3 install flask"
+  - "pip install flask"
 
 before_script: cd src/server/rest
 
