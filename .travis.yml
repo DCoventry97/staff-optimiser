@@ -7,7 +7,7 @@ sudo: false
 install:
   - "pip install tensorflow"
 
-before_script: cd src/server/algorithms
+before_script: cd src/server/rest
 
 script:
-  - python read_user_data.py
+  - python main.py
