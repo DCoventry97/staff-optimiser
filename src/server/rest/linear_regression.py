@@ -2,15 +2,14 @@ from __future__ import print_function
 
 import tensorflow as tf
 import numpy
-from src.server.rest import read_user_data
+import read_user_data
 rng = numpy.random
 
 
 class LinearRegression:
 
-    # Initialise object with username to query
-    def __init__(self, username):
-        self.username = username
+    # Give username to query
+    def get_val(self, username):
 
         # Parameters
         learning_rate = 0.01
@@ -65,5 +64,7 @@ class LinearRegression:
             print("Optimization Finished!")
             training_cost = sess.run(cost, feed_dict={X: train_X, Y: train_Y})
             print("Training cost=", training_cost, "W=", sess.run(W), "b=", sess.run(b), '\n')
-
+            
             return sess.run(W)
+
+
