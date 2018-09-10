@@ -1,6 +1,6 @@
 #!flask/bin/python
 import xml.etree.cElementTree as ET
-from flask import Flask, request, Response, jsonify, render_template
+from flask import Flask, request, Response, jsonify, render_template, redirect
 import json
 from os import path
 
@@ -9,6 +9,23 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     return render_template("index.html")
+
+
+@app.route("/getreport/<id>")
+def view_report(id):
+    return id
+    
+
+@app.route("/getreport", methods=["GET","POST"])
+def get_report():
+    if request.method == "GET":
+        with open("staff.txt") as staff_names:
+            all_names = staff_names.readlines()
+            del all_names[0]
+        return render_template("select_report.html", names=all_names)
+    else:
+        staff = request.form["staff-select"]
+        return redirect("/getreport/"+staff)
 
 
 @app.route("/staffscore", methods=["POST"])
@@ -30,6 +47,9 @@ def staff_score():
             root = ET.Element("staffData")
             tree = ET.ElementTree(root)
             tree.write("..//algorithms/"+staff_name+".xml")
+            with open("staff.txt", "a") as staff_names:
+                staff_names.write("\n"+staff_name)
+                staff_names.close()
 
         with open("..//algorithms/"+staff_name+".xml") as file:
             tree = ET.parse("..//algorithms/"+staff_name+".xml")
