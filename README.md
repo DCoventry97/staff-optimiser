@@ -2,7 +2,7 @@
 Business performance optimiser. Using customer feedback, sales and other data to review performance of a period of time.
 
 ## Motivation
-Winchester Council held a hackathon at the University of Winchester. One challenge was to hack together solutions that help imrpove local business using machine learning algorithms to process data. 
+Winchester Council held a hackathon at the University of Winchester. One challenge was to hack together solutions that help imrpove local business using machine learning algorithms to process data. This solution is soley a protoype, it uses a trivial linear regression algorithm but still manages to demonstrate the overall concept (to the demands of this Hackahon).
 
 ## Build Status
 [![Build Status](https://travis-ci.com/dtlight/staff-optimiser.svg?token=8VzQcFZGdx7xQoVYeEZv&branch=master)](https://travis-ci.com/dtlight/staff-optimiser)
@@ -25,19 +25,24 @@ The code can be modified for use in different scenarios, eg to monitor the numbe
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://www.python.org/dev/peps/pep-0008/)
 
 ## Before you begin
-
-### Prerequisites
+Assuming you already have [Python 3](https://www.python.org/downloads), you'll also require tensorflow, flask and matplotlib
 
 ### Installing
-Server essentially requires two main components. The server itself (see rest api below) and the machine learning algorithms (see algorithms beow)
-#### algorithms
+
+Tensorflow
+
 ```bash
 pip3 install tensorflow
 ```
 
-#### rest api
+Flask
 ```bash
 pip3 install flask
+```
+
+Matplotlib (for plotting graphs)
+```bash
+pip install matplotlib
 ```
 
 ## Acknowledgments
