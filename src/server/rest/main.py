@@ -2,7 +2,7 @@
 import xml.etree.cElementTree as ET
 from flask import Flask, request, Response, jsonify, render_template
 import json
-from pathlib import Path
+from os import path
 
 app = Flask(__name__)
 
@@ -25,21 +25,21 @@ def staff_score():
         time = subdata.get("time")
         score = subdata.get("score")
 
-        file = Path("./"+staff_name+".xml")
-        if not file.is_file():
+        file = path.isfile("..//algorithms/"+staff_name+".xml")
+        if not file:
             root = ET.Element("staffData")
             tree = ET.ElementTree(root)
-            tree.write(staff_name+".xml")
+            tree.write("..//algorithms/"+staff_name+".xml")
 
-        with open(staff_name+".xml") as file:
-            tree = ET.parse(staff_name+".xml")
+        with open("..//algorithms/"+staff_name+".xml") as file:
+            tree = ET.parse("..//algorithms/"+staff_name+".xml")
             root = tree.getroot()
             new_rating = ET.SubElement(root, "rating")
             new_time = ET.SubElement(new_rating, "time")
             new_time.text = str(time)
             new_score = ET.SubElement(new_rating, "score")
             new_score.text = str(score)
-            tree.write(staff_name+".xml")
+            tree.write("..//algorithms/"+staff_name+".xml")
 
         return jsonify({"a":score}), 201
 
