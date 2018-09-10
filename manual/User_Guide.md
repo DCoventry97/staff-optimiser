@@ -10,7 +10,7 @@ Go to local host port 7643 (http://127.0.0.1:7643)
 ## Cashier Log In
 The example in this case is 12768 but it can be anything. This could be modified to read from a set of users stored in a database, but for now it's just a demonstration. 
 
-<img src="img/log_in.jpg" width="800"/>
+<img src="img/log_in.jpg" width="600"/>
 
 Once a user's id is entered the following prompt appears:
 
@@ -30,8 +30,12 @@ Y axis = feedback score
 <img src="img/results_example.png" width="800"/>
 
 ## Business query
-A businesses can now submit queries. Customer feedback trends are displayed.
+A businesses can now submit queries. 
 
-<img src="img/feedback1.png" width="800"/>
+<img src="img/feedback1.png" width="600"/>
 
-<img src="img/feedback2.png" width="800"/>
+<img src="img/feedback2.png" width="600"/>
+
+Customer feedback trends are displayed once the following url is entered:
+
+> http://127.0.0.1:7643/getreport
