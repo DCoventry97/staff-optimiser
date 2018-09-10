@@ -21,9 +21,9 @@ def view_report(id):
     if abs(result) > 0.1:
         advice = "No trend detected."
     elif result > 0:
-        advice = "more productive earlier in the day."
-    else:
         advice = "more productive later in the day."
+    else:
+        advice = "more productive earlier in the day."
     return render_template("result.html", advice = advice)
 
 
